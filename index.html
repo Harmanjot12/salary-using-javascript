@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Employee Details</title>
+        <script>
+        
+            function salary(){
+		            var salary = parseFloat(document.getElementById("salary").value);
+                    
+            		var HRA = 12.5 / salary * 100;
+                    var DA  = 85.6 / salary * 100;
+                    var TA  = 2.5 / salary * 100;
+                    var PF  = 10.5 / salary * 100;
+
+                    var inHand = salary + HRA + DA + TA - PF;
+
+                    document.getElementById("inHand").value = inHand;
+	            } 
+
+        </script>
+    </head>
+
+    <body>
+        <form>
+            <input type="text" name="employeename" placeholder="Employee Name..." id="name"><br><br>
+            <input type="text" name="employeecode" placeholder="Employee Code..." id="code"><br><br>
+            <input type="text" name="salary" placeholder="Salary..." id="salary">
+
+            <input type="button" name="calculate" value="calculate" onclick="salary()">
+            
+            <input type="text" name="inHand" id="inHand">
+
+        </form>
+    </body>    
+</html>
